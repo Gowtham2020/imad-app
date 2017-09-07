@@ -33,11 +33,12 @@ var articles={
 function createtemplate(data){
     var title=data.title;
     var heading=data.heading;
-    var content=data.coontent;
+    var content=data.content;
     
     var htmltemplate=`<html>
 <head>
 <title>$(title)</title>
+<link href="/ui/style.css" rel="stylesheet" />
 </head>
 
 <body>
@@ -52,9 +53,9 @@ $(content)
 </div>
 </div>
 </body>
-</html>
-
-    
+</html>`
+;
+ return htmltemplate;   
 }
 
 app.get('/', function (req, res) {
@@ -64,15 +65,11 @@ app.get('/', function (req, res) {
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
 });
-app.get('/article-one', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'articleone.html'));
+app.get('/:articlename', function (req, res) {
+    var articlename=req.params.articlename;
+  res.send(createtemplate(articles[articlename]));
 });
-app.get('/article-two', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'articletwo.html'));
-});
-app.get('/article-three', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'articlethree.html'));
-});
+
 app.get('/ui/madi.png', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'madi.png'));
 });
