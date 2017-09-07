@@ -7,19 +7,19 @@ app.use(morgan('combined'));
 
 var articles={
     
-    'article-one':{title:'article-one',
+    'article-one':{title:'article one',
         heading:'Article-one',
         content:`<p>lides: https://docs.google.com/presentation/d/19gCzh13_rZ8bpT_FTx27Gglu9jujjbTF0I8xrhMqpN0/ Forum: https://discourse.imad.hasura.io</p>
 <p>lides: https://docs.google.com/presentation/d/19gCzh13_rZ8bpT_FTx27Gglu9jujjbTF0I8xrhMqpN0/ Forum: https://discourse.imad.hasura.io</p>
 <p>lides: https://docs.google.com/presentation/d/19gCzh13_rZ8bpT_FTx27Gglu9jujjbTF0I8xrhMqpN0/ Forum: https://discourse.imad.hasura.io</p>
 `},
-    'article-two':{title:'article-two',
+    'article-two':{title:'article two',
         heading:'Article-two',
         content:`<p>lides: https://docs.google.com/presentation/d/19gCzh13_rZ8bpT_FTx27Gglu9jujjbTF0I8xrhMqpN0/ Forum: https://discourse.imad.hasura.io</p>
 <p>lides: https://docs.google.com/presentation/d/19gCzh13_rZ8bpT_FTx27Gglu9jujjbTF0I8xrhMqpN0/ Forum: https://discourse.imad.hasura.io</p>
 <p>lides: https://docs.google.com/presentation/d/19gCzh13_rZ8bpT_FTx27Gglu9jujjbTF0I8xrhMqpN0/ Forum: https://discourse.imad.hasura.io</p>
 `},
-     'article-three':{title:'article-three',
+     'article-three':{title:'article three',
         heading:'Article-three',
         content:`<p>lides: https://docs.google.com/presentation/d/19gCzh13_rZ8bpT_FTx27Gglu9jujjbTF0I8xrhMqpN0/ Forum: https://discourse.imad.hasura.io</p>
 <p>lides: https://docs.google.com/presentation/d/19gCzh13_rZ8bpT_FTx27Gglu9jujjbTF0I8xrhMqpN0/ Forum: https://discourse.imad.hasura.io</p>
@@ -27,9 +27,9 @@ var articles={
 `}
 };
 function createtemplate(data){
-    var title=data.title;
-    var heading=data.heading;
-    var content=data.content;
+    var title= data.title;
+    var heading= data.heading;
+    var content= data.content;
     
     var htmltemplate=`<html>
 <head>
