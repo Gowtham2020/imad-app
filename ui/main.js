@@ -5,3 +5,4 @@ button.onclick =function (){
     var span=document.getElementById('count');
     span.innerHTML =counter.toString();
 };
+alert("Hello! I am an alert box!!");
