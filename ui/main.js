@@ -38,6 +38,6 @@ submit.onclick =function (){
     var name=nameinput.value;
    
     
-   request.open('GET','http://howdygowtham.imad.hasura-app.io/counter',true);
+   request.open('GET','http://howdygowtham.imad.hasura-app.io/submit-name?name='+name,true);
    request.send(null);
 };
