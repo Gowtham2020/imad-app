@@ -15,18 +15,26 @@ button.onclick =function (){
    request.open('GET','http://howdygowtham.imad.hasura-app.io/counter',true);
    request.send(null);
 };
-button.onclick =function (){
+submit.onclick =function (){
     var request = new XMLHttpRequest();
     
     request.onreadystatechange = function(){
           
           if(request.readyState == XMLHttpRequest.DONE){
               if(request.status == 200){
-                  
+                  var names=request.responseText;
+                  names=JSON.parse(name);
+                  var list='';
+                  for(var i=0;i<names.length;i++){
+                      list='<li>'+names[i]+'</li>';
+                  }
+                  var ul=document.getElementById()
               }
           }
     };
-    var nameinput=document.getElementById('')
+    var nameinput=document.getElementById('name');
+    var submit=document.getElementById('submit_btn');
+    
    request.open('GET','http://howdygowtham.imad.hasura-app.io/counter',true);
    request.send(null);
 };
