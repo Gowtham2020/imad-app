@@ -34,6 +34,7 @@ function createtemplate(data){
     var htmltemplate=`<html>
 <head>
 <title>${title}</title>
+<hr/>
 <link href="/ui/style.css" rel="stylesheet" />
 </head>
 
