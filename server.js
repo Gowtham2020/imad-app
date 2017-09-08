@@ -43,7 +43,7 @@ function createtemplate(data){
 <div>
 <h1>
 ${heading}
-</hr>
+<hr/>
 </h1>
 </div>
 <div>
