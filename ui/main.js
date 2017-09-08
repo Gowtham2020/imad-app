@@ -15,6 +15,7 @@ button.onclick =function (){
    request.open('GET','http://howdygowtham.imad.hasura-app.io/counter',true);
    request.send(null);
 };
+ var submit=document.getElementById('submit_btn');
 submit.onclick =function (){
     var request = new XMLHttpRequest();
     
@@ -35,7 +36,7 @@ submit.onclick =function (){
     };
     var nameinput=document.getElementById('name');
     var name=nameinput.value;
-    var submit=document.getElementById('submit_btn');
+   
     
    request.open('GET','http://howdygowtham.imad.hasura-app.io/counter',true);
    request.send(null);
