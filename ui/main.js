@@ -15,3 +15,18 @@ button.onclick =function (){
    request.open('GET','http://howdygowtham.imad.hasura-app.io/counter',true);
    request.send(null);
 };
+button.onclick =function (){
+    var request = new XMLHttpRequest();
+    
+    request.onreadystatechange = function(){
+          
+          if(request.readyState == XMLHttpRequest.DONE){
+              if(request.status == 200){
+                  
+              }
+          }
+    };
+    var nameinput=document.getElementById('')
+   request.open('GET','http://howdygowtham.imad.hasura-app.io/counter',true);
+   request.send(null);
+};
